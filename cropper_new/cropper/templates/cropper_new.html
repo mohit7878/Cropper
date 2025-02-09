@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Crop Your Shipping Labels</title>-->
+<!--    <link rel="stylesheet" href="{% static 'cropper.css' %}">-->
+<!--    <script src="{% static 'jquery-3.6.0.min.js' %}"></script>-->
+<!--</head>-->
+<!--<body>-->
+
+{% block card %}
+    <div class="container">
+        <div class="custom_container">
+            <div class="header">
+                <h1>Crop Your Shipping Labels</h1>
+                <h2>Quickly and Easily</h2>
+                <p>Easily crop shipping labels for Amazon, FlipKart, Meesho, and Shiprocket</p>
+            </div>
+            <div class="main-content">
+                <div class="upload-section">
+                    <h3>Upload & Crop</h3>
+                    <div id="dropZone" class="drop-zone">
+                        <img src="{% static 'icons/upload.svg' %}" class="upload_icon">
+                        <h4 class="uypdf"><b>Upload your PDF</b></h4>
+                        <span id="upload_box_text">Drag and drop your shipping label PDF here, or click to browse</span>
+                        <input type="file" name="pdf_file[]" id="pdf_file" accept="application/pdf" required class="hidden" multiple>
+                    </div>
+                    <div class="printer-selection">
+                        <h3>Select Printer</h3>
+                        <div class="printer-buttons">
+                            <button id="inkjetPrinter" class="printer-btn">
+                                <img src="{% static 'icons/printer.svg' %}" class="printer_icon">
+                                <div>
+                                    <div class="printer-btn-color"><b>Inkjet Printer</b></div>
+                                    <div class="printer-desc">A4 size</div>
+                                </div>
+                            </button>
+                            <button id="thermalPrinter" class="printer-btn">
+                                <img src="{% static 'icons/printer.svg' %}" class="printer_icon">
+                                <div>
+                                    <div class="printer-btn-color"><b>Thermal Printer</b></div>
+                                    <div class="printer-desc">6 x 4 inches</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <h3>Download Files</h3>
+                        <a href="javascript:void(0)" id="downloadSingle" class="download-btn " download>
+                            <button  id="single" class="download-btn">
+                                <img class="icon-color" src="{% static 'icons/download.svg' %}">
+                                <h4 class="download-btn-color" id="download-btn-color">Download PDF</h4>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="preview-section">
+                    <div class="preview">
+                        <img src="{% static 'icons/eye.svg' %}">
+                        <h3>Preview</h3>
+                    </div>
+                    <div class="pdf-preview">
+                        <span id="pdfPreview" style="display: block;">PDF preview will appear here</span>
+                        <iframe id="iframe" style="width: 100%;height: 100%;border: none; overflow: auto; display: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="toast-overlay" id="toast-overlay"></div>
+
+    </div>
+{% endblock %}
+<!--</body>-->
+{% block jsbody %}
+
+<script src="{% static 'cropper.js' %}"></script>
+
+{% endblock %}
+<!--</html>-->

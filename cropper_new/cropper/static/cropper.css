@@ -1,0 +1,366 @@
+/* General Styles */
+main {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px; /* Adjust this value to the height of your header */
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+.header p {
+  color: #4a5568;
+}
+
+.main-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.upload-section, .preview-section {
+  width: 50%;
+}
+
+.upload-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #202021;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #f9fafb;
+}
+
+.drop-zone {
+    border: 2px dashed #cfcfcf;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    color: #474b57;
+    transition: border-color 0.3s;
+    height: 7.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; /* Adjust the gap as needed */
+    background-color:#F9FAFC;
+}
+
+.drop-zone:hover {
+  border-color: #63666c;
+}
+
+.printer-selection h3, .orientation-selection h3, .download-buttons h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.printer-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+}
+button#thermalPrinter {
+    border-color: #ECECEC;
+}
+button#inkjetPrinter {
+    border-color: #ECECEC;
+}
+
+.printer-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid #202021;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.printer-btn:hover {
+  border-color: #63666c;
+}
+
+.printer-name {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.printer-desc {
+  font-size: 0.875rem;
+  color:#989faa;
+}
+
+.pdf-preview {
+  background-color: #F3F4F6;
+  border-radius: 0.5rem;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #515255;
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+a#downloadSingle {
+    border-color: #ECECEC;
+}
+
+#downloadSingle{
+    text-decoration:none;
+}
+
+#single{
+    border:none;
+    padding:0;
+    width:-webkit-fill-available;
+    background-color:#dfdfdf;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0rem;
+    border: 1px solid #202021;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-btn.primary {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+}
+
+.download-btn.primary:hover {
+    background-color: #1d4ed8;
+}
+
+.download-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.file-count {
+  font-size: 0.875rem;
+  color: #515255;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-color{
+    background-color: #EFF6FF;
+}
+
+.printer-btn-color{
+    color:#44424F;
+}
+.printer-selection, .download-buttons, .upload-section, .preview-section {
+    text-align: left;
+    color:#232630;
+}
+
+.upload_icon{
+    width: 50px;
+}
+
+.printer_icon{
+    width: 20px;
+}
+
+.uypdf {
+    margin: 0.7rem;
+}
+
+.preview {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.custom_container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.toast-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    z-index: 1022; /* Slightly lower than the toast (1023) */
+    display: none; /* Hidden by default */
+}
+
+.toast-overlay.show {
+    display: block; /* Display the overlay when the 'show' class is added */
+}
+
+.toast {
+    position: fixed;
+    top: 105px;
+    right: 25px;
+    max-width: 300px;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1023;
+    animation: slideInRight 0.3s ease-in-out forwards,
+        fadeOut 0.5s ease-in-out
+            forwards 3s;
+    transform: translateX(110%);
+}
+
+.toast.toast-success {
+    background: #95eab8;
+}
+
+.toast.toast-success .toast-progress {
+    background-color: #2ecc71;
+}
+
+.toast.toast-danger {
+    background: #efaca5;
+}
+
+.toast.toast-danger .toast-progress {
+    background-color: #e74c3c;
+}
+
+.toast-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toast-icon {
+    padding: 0.35rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.toast-message {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #000000;
+    padding: 0.5rem;
+}
+
+.toast-progress {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #b7b7b7;
+    animation: toastProgress 3s
+        ease-in-out forwards;
+}
+
+.toast.closing {
+    animation: slideOutRight 0.5s
+        ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(110%);
+    }
+
+    75% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes toastProgress {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
